@@ -115,7 +115,7 @@ namespace MyHappyFirstProgram
 
 
             // иллюстрация разницы между ссылочными и значимыми
-            Type1 obj1 = new();
+            /*Type1 obj1 = new();
             obj1.Value = 10;
 
             Type1 obj2 = obj1;
@@ -123,7 +123,97 @@ namespace MyHappyFirstProgram
             Console.WriteLine($"obj2 = {obj2.Value}");
             obj1.Value = 20;
             Console.WriteLine($"obj1 = {obj1.Value}");
-            Console.WriteLine($"obj2 = {obj2.Value}");
+            Console.WriteLine($"obj2 = {obj2.Value}");*/
+
+            // Операции над данными
+            // математические операции
+            double a = 10;
+            double b = 10;
+            double result;
+
+            result = a + b;
+            result = a - b;
+            result = a * b;
+            result = a / b;
+
+            result = result + 1;
+            result++; // инкремент (увеличение на 1)
+            result--; // декремент (уменьшение на 1)
+
+            result += 15; // добавить к result число 15
+            result = result + 15; // то же самое
+            result -= a;
+            result *= 10;
+            result /= b;
+
+            int i = 100;
+            //i /= 3;
+            Console.WriteLine(i); // остатка нет!
+
+            // остаток от деления
+            i = i % 3;
+            Console.WriteLine(i);
+
+            // побитовые операции
+            // 0000 0000 0000 0000 0000 0000 0000 0001
+            // 0000 0000 0000 0000 0000 0000 0000 0010
+            int x = 2;
+            result = i & x; // битовое И
+            // 0000 0000 0000 0000 0000 0000 0000 0000
+            result = i | x; // битовое ИЛИ
+            // 0000 0000 0000 0000 0000 0000 0000 0011
+            result = ~x; // битовое инверсия
+            // 1111 1111 1111 1111 1111 1111 1111 1110
+            result = i ^ x; // битовое исключающее ИЛИ
+            // 0000 0000 0000 0000 0000 0000 0000 0011
+
+            result = x << 2;
+            Console.WriteLine(result);
+            // 0000 0000 0000 0000 0000 0000 0000 1000
+            result = x >> 2;
+            Console.WriteLine(result);
+            // 0000 0000 0000 0000 0000 0000 0000 0000
+
+            // логические операции
+            // bool
+            bool a1 = true;
+            bool a2 = false;
+
+            bool bResult;
+            bResult = a1 && a2; // коньюнкция (И)
+            bResult = a1 || a2; // дизъюнкция (ИЛИ)
+            bResult = a1 & a2;  // коньюнкция
+            bResult = a1 | a2;  // дизъюнкция
+            bResult = a1 ^ a2;  // исключающая дизъюнкция (ИЛИ)
+            bResult = !a1;      // отрицание
+
+            // сложные математические операции
+            result = Math.Cos(x);
+            result = Math.Tan(x);
+            result = Math.Pow(x, 5); // возвести х в 5 степень
+            result = Math.Abs(x);    // модуль числа
+            result = Math.Sqrt(x);   // квадратный корень
+
+            result = (x + a) / b;    // скобочками можно регулировать
+                                     // порядок вычисления
+
+            // ввод/вывод в консоли
+            Console.WriteLine(); // метод вывода данных на консоль
+            Console.WriteLine(result);
+            Console.WriteLine("Результат: " + result);
+            Console.WriteLine($"Результат: {result}"); // интерполяция
+            Console.WriteLine($"result: {result}, a = {a}, b = {b}");
+            Console.WriteLine($"a1 = {a1}, a2 = {a2}");
+
+//            Console.ReadLine(); // ввод строки в консоль
+            // если мы хотим ввести целое число
+            int x1 = int.Parse(Console.ReadLine());
+
+            double.TryParse(Console.ReadLine(), out double x2);
+            Console.WriteLine(x2);
+            // использование класса Convert
+            double x3 = Convert.ToDouble(Console.ReadLine());
+            x1 = Convert.ToInt32(Console.ReadLine());
         }
     }
 
